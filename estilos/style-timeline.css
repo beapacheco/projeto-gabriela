@@ -1,0 +1,210 @@
+@charset "UTF-8";
+
+/*
+PALETA DE CORES:
+
+verde lésbico - #566837
+verde médio - #4E6B25
+verde claro - #ABC77D
+verde clarinho - #CBEC9C
+verde escuro - #273611
+
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
+
+:root {
+    --verde-lesbico: #566837;
+    --verde-medio: #4E6B25;
+    --verde-claro: #ABC77D;
+    --verde-clarinho: #CBEC9C;
+    --verde-escuro: #273611;
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    font-family: 'Montserrat', 'Raleway', sans-serif;
+    background-color: var(--verde-clarinho);
+}
+
+header {
+    background-color: var(--verde-lesbico);
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    height: 200px;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-evenly;
+}
+
+header h1 {
+    font: normal 4.5em 'Great Vibes';
+    padding: 30px;
+    transition: 2s;
+    margin: 0px;
+}
+
+header img {
+    object-fit: cover;
+    border-radius: 50%;
+    display: inline-block;
+    margin: 10px;
+    width: 200px;
+    height: 200px;
+}
+
+nav {
+    background-color: var(--verde-lesbico);
+    margin: 0px;
+    padding: 20px 20px;
+    display: flex;
+    flex-flow: row nowrap;
+}
+
+nav li {
+    font: normal 0.9em 'Montserrat';
+    padding-top: 0px;
+    transition: transform 0.3s;
+    list-style-type: none;
+    display: inline-block;
+}
+
+nav a {
+    text-decoration: none;
+    border-radius: 10px;
+    padding: 10px;
+    color: #273611;
+    background-color: var(--verde-clarinho);
+}
+
+nav a:hover {
+    background-color: white;
+    color: var(--verde-lesbico);
+    transform: translate(-3px, -3px);
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.400);
+    transition: transform 0.3s;
+}
+
+h2 {
+    text-align: center;
+    margin: 90px;
+    background-color: #273611;
+    font: bold 1.1em 'Montserrat';
+    color: var(--verde-escuro);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    background-color: var(--verde-clarinho);
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+h2:hover {
+    background-color: var(--verde-medio);
+    color: white;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+main {
+    background-color: var(--verde-clarinho);
+    margin: auto;
+    max-width: 700px;
+}
+
+.teste {
+    background-color: red;
+}
+
+.timeline {
+    display: flex;
+    flex-flow: row wrap ;
+    align-content: center;
+    justify-content: space-evenly;
+    max-width: 100%;
+    margin: 10px;
+}
+
+.timeline-img {
+    height: 80px;
+    width: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.itens {
+    display: flex;
+    flex-flow: column nowrap ;
+    align-items: center;
+    justify-content: center;
+    width: 120px;
+    height: fit-content;
+    margin: 0px 20px;
+    position: relative;
+    transition: transform 0.3s ease-in-out;
+    text-align: center;
+} 
+
+.itens:hover {
+    transform: scale(2);
+    cursor: pointer;
+}
+
+.legenda {
+    font: normal 'Raleway' var(--verde-lesbico);
+    opacity: 0;
+    margin-top: 10px;
+}
+
+.itens:hover .legenda {
+    opacity: 1;
+    font-size: 0.5em;
+    padding-bottom: 50px;
+    margin: 10px;
+    text-align: center;
+}
+
+a.cta-section {
+    padding: 10px 20px;
+    margin: auto;
+    font-size: 1.1em;
+    color: white;
+    background-color: var(--verde-medio);
+    text-decoration: none;
+    border-radius: 30px;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center; 
+    text-align: center; /
+}
+
+a.cta-section:hover {
+    background-color: white;
+    color: var(--verde-medio);
+}
+
+audio {
+    margin: 50px;
+}
+
+footer {
+    background-color: var(--verde-lesbico);
+    font-size: 0.8em;
+    color: var(--verde-clarinho);
+    padding: 10px;
+    text-align: center;
+}
+
+footer a {
+    text-decoration: underline;
+    color: var(--verde-clarinho);
+}
+

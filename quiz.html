@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Distância - Gabia</title>
+    <link rel="shortcut icon" href="imagens/favicon/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="estilos/style-quiz.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=chevron_right" />
+</head>
+<body>
+    <header>
+        <h1> Beatriz & Gabriela </h1>
+        <img src="imagens/1.jpg" alt="Foto minha e da minha namorada">
+    </header>
+    <nav>
+        <ul>
+            <li><a href="index.html" target="_self">Home</a></li>
+            <li><a href="timeline.html" target="_self">Linha do Tempo</a></li>
+            <li><a href="distancia.html" target="_self">Distância</a></li>
+            <li><a href="quiz.html" target="_self">Quiz</a></li> 
+            <li><a href="favoritos.html" target="_self">Favoritos</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section>
+            <div class="quiz">
+                <h2>Quiz sobre nosso relacionamento!</h2>
+            </div>
+
+            <p class="regras">Aqui estão as regras do jogo:</p>
+            <ol>
+                <li>São 10 perguntas "discursivas", 10 perguntas de múltipla-escola e 1 pergunta extra</li>
+                <li>Cada pergunta vale 1 ponto</li>
+                <li>A sua pontuação depende do número de acertos, simples assim</li>
+                <li>Você deve responder o quiz em ligação de vídeo comigo ou tirar print das suas respostas e me enviar!</li>
+            </ol>
+            <p class="ps">ps: Eu aceito a ajuda com a parte backend agora que você já viu a surpresa rs</p>
+
+            <form action="quiz.php" method="post" autocomplete="off">
+       
+                <label for="iquiz1">1- Onde foi nosso primeiro encontro?</label>
+                <input type="text" name="quiz1" id="iquiz1" required>
+
+                <label for="iquiz2">2- Qual o nosso destino de viagem dos sonhos juntas?</label>
+                <input type="text" name="quiz2" id="iquiz2" required>
+                
+                <label for="iquiz3">3- Qual a nossa comida favorita pra pedir em restaurante?</label>
+                <input type="text" name="quiz3" id="iquiz3" required>
+
+                <label for="iquiz4">4- Qual a nossa maior aventura juntas até agora?</label>
+                <input type="text" name="quiz4" id="iquiz4" required>
+
+                <label for="iquiz5">5- Qual a coisa mais engraçada que já aconteceu com a gente?</label>
+                <input type="text" name="quiz5" id="iquiz5" required>
+
+                <label for="iquiz6">6- Qual foi o primeiro filme que assistimos juntas?</label>
+                <input type="text" name="quiz6" id="iquiz6" required>
+                
+                <label for="iquiz7">7- Qual é a nossa série favorita de assistir juntas?</label>
+                <input type="text" name="quiz7" id="iquiz7" required>
+
+                <label for="iquiz8">8- Qual foi o presente mais memorável que já te dei?</label>
+                <input type="text" name="quiz8" id="iquiz8" required>
+
+                <label for="iquiz9">9- Qual música a gente ama dançar juntas?</label>
+                <input type="text" name="quiz9" id="iquiz9" required>
+                
+                <label for="iquiz10">10- ULTIMA PERGUNTA</label> 
+                <input type="text" name="quiz10" id="iquiz10" required>
+                
+                <div class="pergunta1">
+                    <p>Quem é mais preguiçosa?</p>
+                    <input type="radio" name="preguica" id="ipreguica" required> <label for="ipreguica">Beatriz</label>
+
+                    <input type="radio" name="preguica" id="ipreguica1" required>
+                    <label for="ipreguica1"> Gabriela</label>
+                </div>
+                <div class="pergunta2">
+                    <p>Quem é mais indecisa?</p>
+                    <input type="radio" name="indecisa" id="iindecisa"> <label for="iindecisa">Beatriz</label>
+
+                    <input type="radio" name="indecisa" id="iindecisa1">
+                    <label for="iindecisa1"> Gabriela</label>
+                </div>
+                <div class="pergunta3">
+                    <p>Quem é mais teimosa?</p>
+                    <input type="radio" name="teimosa" id="iteimosa"> <label for="iteimosa">Beatriz</label>
+
+                    <input type="radio" name="teimosa" id="iteimosa1">
+                    <label for="iteimosa1"> Gabriela</label>
+                </div>
+                <div class="pergunta4">
+                    <p>Quem é mais ciumenta?</p>
+                    <input type="radio" name="ciumenta" id="iciumenta"> <label for="iciumenta">Beatriz</label>
+
+                    <input type="radio" name="ciumenta" id="iciumenta1">
+                    <label for="iciumenta1"> Gabriela</label>
+                </div>
+                <div class="pergunta5">
+                    <p>Quem é mais brincalhona?</p>
+                    <input type="radio" name="brincalhona" id="ibrincalhona"> <label for="ibrincalhona">Beatriz</label>
+
+                    <input type="radio" name="brincalhona" id="ibrincalhona1">
+                    <label for="ibrincalhona1"> Gabriela</label>
+                </div>
+                <div class="pergunta6">
+                    <p>Quem é mais responsável?</p>
+                    <input type="radio" name="responsavel" id="iresponsavel"> <label for="iresponsavel">Beatriz</label>
+
+                    <input type="radio" name="responsavel" id="iresponsavel1">
+                    <label for="iresponsavel1"> Gabriela</label>
+                </div>
+                <div class="pergunta7">
+                    <p>Quem demora mais pra se arrumar?</p>
+                    <input type="radio" name="arrumar" id="iarrumar"> <label for="iarrumar">Beatriz</label>
+
+                    <input type="radio" name="arrumar" id="iarrumar1">
+                    <label for="iarrumar1"> Gabriela</label>
+                </div>
+                <div class="pergunta8">
+                    <p>Quem é mais caseira?</p>
+                    <input type="radio" name="caseira" id="icaseira"> <label for="icaseira">Beatriz</label>
+
+                    <input type="radio" name="caseira" id="icaseira1">
+                    <label for="icaseira1"> Gabriela</label>
+                </div>
+                <div class="pergunta9">
+                    <p>Quem é mais romântica?</p>
+                    <input type="radio" name="romantica" id="iromantica"> <label for="iromantica">Beatriz</label>
+
+                    <input type="radio" name="romantica" id="iromantica1">
+                    <label for="iromantica1"> Gabriela</label>
+                </div>
+                <div class="pergunta10">
+                    <p>Quem é mais pão dura?</p>
+                    <input type="radio" name="paodura" id="ipaodura">
+                    <label for="ipaodura">Beatriz</label>
+
+                    <input type="radio" name="paodura" id="ipaodura1">
+                    <label for="ipaodura1"> Gabriela</label>
+                </div>
+
+                <input type="submit" value="Enviar">
+            </form>
+
+                <div class="container">
+                    <h2>Adivinha o quanto eu te amo!</h2>
+                    <p>Digite um número abaixo e eu vou te responder se você acertou ou não!</p>
+                    
+                    <input type="number" id="chute" placeholder="Digite um número">
+                    <br>
+                    <button onclick="verificarResposta()">Enviar</button>
+                    
+                    <p id="resultado"></p>
+                </div>
+            <a class="cta-section" href="favoritos.html">Próxima página <span class="material-symbols-outlined">
+                chevron_right
+                </span> </a>
+            <audio id="player" controls autoplay loop>
+                <source src="musicas/quando-bate.mp3" type="audio/mpeg">
+                Seu navegador não suporta o elemento de áudio.
+            </audio>
+        </section>
+    </main>
+
+    <footer>
+        <p>
+            "Pois tudo que é amor parece com você."
+            Criado por <a href="https://github.com/beapacheco" target="_blank">Beatriz Pacheco</a>
+        </p>
+    </footer>
+
+    <script src="script-quiz.js"></script>
+</body>
+</html>

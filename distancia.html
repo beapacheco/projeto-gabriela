@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Distância - Gabia</title>
+    <link rel="shortcut icon" href="imagens/favicon/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="estilos/style-distancia.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=chevron_right" />
+</head>
+<body>
+    <header>
+        <h1> Beatriz & Gabriela </h1>
+        <img src="imagens/1.jpg" alt="Foto minha e da minha namorada">
+    </header>
+    <nav>
+        <ul>
+            <li><a href="index.html" target="_self">Home</a></li>
+            <li><a href="timeline.html" target="_self">Linha do Tempo</a></li>
+            <li><a href="distancia.html" target="_self">Distância</a></li>
+            <li><a href="quiz.html" target="_self">Quiz</a></li> 
+            <li><a href="favoritos.html" target="_self">Favoritos</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section id="itens">
+            <div class="contagem">
+                <h2>Contagem Regressiva</h2>
+                <div id="countdown"></div>
+            </div>
+
+            <div class="relogio">
+                <h2>Nossos fusos</h2>
+                <div id="clock-brasil" class="clock"></div>
+                <div id="clock-portugal" class="clock"></div>
+            </div>
+        </section>
+
+        <section>
+            <form action="get">
+                <fieldset>
+                    <legend><ins>Lista para fazermos na próxima vez que estivermos juntas</ins></legend>
+                    <input type="checkbox" id="option1" name="options" value="1">
+                    <label for="option1">Conhecer mais Sintra (Castelo dos Mouros, Quinta da Regaleira, Palácio da Pena, Palácio de Monserrate, etc.)</label> <br>
+                    <input type="checkbox" id="option2" name="options" value="2">
+                    <label for="option2">Conhecer mais Cascais (Farol de Santa Maria, Forte de São Jorge de Oitavos, Boca do Inferno, etc)</label> <br>
+                    <input type="checkbox" id="option3" name="options" value="3">
+                    <label for="option3">Assistir o nascer do sol na praia</label> <br>
+                    <input type="checkbox" id="option4" name="options" value="4">
+                    <label for="option4">Ir ao Parque dos Poetas</label> <br>
+                    <input type="checkbox" id="option5" name="options" value="5">
+                    <label for="option5">Conhecer mais Lisboa (Castelo de São Jorge, Convento do Carmo, Museu do Azulejo, Telecabine, Jardim Zoológico, etc.)</label> <br>
+                    <input type="checkbox" id="option6" name="options" value="6">
+                    <label for="option6">Visitar alguma cidade em Portugal (Porto, Aveiro, Faro, Braga, Peniche, Coimbra...)</label> <br>
+                    <input type="checkbox" id="option7" name="options" value="7">
+                    <label for="option7">Fazer você provar bitoque, bacalhau e francesinha</label> <br>
+                    <input type="checkbox" id="option8" name="options" value="8">
+                    <label for="option8">Assistir um show de fado</label> <br>
+            
+                    <input type="checkbox" id="option9" name="options" value="9">
+                    <label for="option9">Visitar alguma cidade em outro país, se possível</label> <br>
+                    <input type="checkbox" id="option10" name="options" value="10">
+                    <label for="option10">Comer risoto de cogumelos em lugares diferentes</label> <br>
+                </fieldset>
+            </form>
+
+            <a class="cta-section" href="quiz.html">Próxima página <span class="material-symbols-outlined">
+                chevron_right
+                </span> </a>
+
+            <audio id="player" controls autoplay>
+                <source src="musicas/partilhar.mp3" type="audio/mpeg">
+                        Seu navegador não suporta o elemento de áudio.
+            </audio>
+        </section>
+    </main>
+
+    <footer>
+        <p>
+            "Pois tudo que é amor parece com você."
+            Criado por <a href="https://github.com/beapacheco" target="_blank">Beatriz Pacheco</a>
+        </p>
+    </footer>
+
+    <script src="script-distancia.js"></script>
+</body>
+</html>

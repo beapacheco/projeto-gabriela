@@ -1,0 +1,298 @@
+@charset "UTF-8";
+
+/*
+PALETA DE CORES:
+
+verde lésbico - #566837
+verde médio - #4E6B25
+verde claro - #ABC77D
+verde clarinho - #CBEC9C
+
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
+
+:root {
+    --verde-lesbico: #566837;
+    --verde-medio: #4E6B25;
+    --verde-claro: #ABC77D;
+    --verde-clarinho: #CBEC9C;
+    --verde-escuro: #273611;
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    font-family: 'Montserrat', 'Raleway', sans-serif;
+    background-color: var(--verde-clarinho);
+    height: 100vh;
+}
+
+header {
+    background-color: var(--verde-lesbico);
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    height: 200px;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-evenly;
+}
+
+header h1 {
+    font: normal 4.5em 'Great Vibes';
+    padding: 30px;
+    transition: 2s;
+    margin: 0px;
+}
+
+header img {
+    object-fit: cover;
+    border-radius: 50%;
+    display: inline-block;
+    margin: 10px;
+    width: 200px;
+    height: 200px;
+}
+
+nav {
+    background-color: var(--verde-lesbico);
+    margin: 0px;
+    padding: 20px 20px;
+    display: flex;
+    flex-flow: row nowrap;
+}
+
+nav li {
+    font: normal 0.9em 'Montserrat';
+    padding-top: 0px;
+    transition: transform 0.3s;
+    list-style-type: none;
+    display: inline-block;
+}
+
+nav a {
+    text-decoration: none;
+    border-radius: 10px;
+    padding: 10px;
+    color: #273611;
+    background-color: var(--verde-clarinho);
+}
+
+nav a:hover {
+    background-color: white;
+    color: var(--verde-lesbico);
+    transform: translate(-3px, -3px);
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.400);
+    transition: transform 0.3s;
+}
+
+main {
+    display: flex;
+    flex-flow: column nowrap;
+    align-content: center;
+    justify-content: space-evenly;
+    background-color: var(--verde-clarinho);
+    margin: auto;
+    max-width: 700px;
+}
+
+.quiz h2 {
+    font: bold 2em 'Montserrat';
+    text-align: center;
+    margin: 60px;
+}
+
+p {
+    font: normal 1em 'Raleway';
+    text-align: center;
+}
+
+.regras {
+    font: 1.2em 'Montserrat';
+    background-color: var(--verde-lesbico);
+    color: white;
+    padding: 10px;
+    border-radius: 10px;
+    margin: 0px 100px 30px 100px;
+}
+
+ol {
+    list-style-position: inside;
+    background-color: var(--verde-claro);
+    padding: 10px;
+    margin-bottom: 30px;
+}
+
+li {
+    font: normal 1em 'Raleway';
+    line-height: 30px;
+}
+
+.ps {
+    margin: 40px;
+}
+
+form {
+    background-color: var(--verde-escuro);
+    border-radius: 10px;
+    box-shadow: 2px 2px 3px black;
+    color: var(--verde-clarinho);
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: space-evenly;
+    padding: 20px;
+}
+
+input[type="text"] {
+    background-color: var(--verde-medio);
+    border: 1px solid var(--verde-clarinho);
+    width: 250px;
+    padding: 5px;
+    margin-bottom: 20px;
+}
+
+input[type="text"]:focus {
+    background-color: var(--verde-clarinho);
+    border: 1px solid var(--verde-clarinho);
+    width: 250px;
+    padding: 5px;
+    margin-bottom: 20px;
+}
+
+label {
+    padding: 10px;
+}
+
+input[type="radio"] {
+    margin: 10px 0px 30px 20px;
+    width: 200px;
+    cursor: pointer;
+    height: 15px;
+}
+
+form p {
+    font: bold 1em 'Raleway';
+    margin-top: 40px;
+    text-align: center;
+    background-color: var(--verde-clarinho);
+    color: var(--verde-escuro);
+    padding: 8px;
+}
+
+input[type="submit"] {
+    background-color: wihte;
+    border: 0px;
+    border-radius: 100px;
+    box-shadow: 1px 1px 1px var(--verde-clarinho);
+    cursor: pointer;
+    padding: 10px 40px;
+    margin: auto;
+    font: bold 1.1em 'Raleway';
+    color: var(--verde-escuro);
+} 
+
+input[type="submit"]:hover {
+    background-color: var(--verde-claro);
+    box-shadow: 1px 1px 1px var(--verde-clarinho);
+
+}
+
+.container {
+    display: flex;
+    flex-flow: column wrap;
+    align-content: center;
+    justify-content: space-evenly;
+}
+
+.container h2 {
+    background-color: var(--verde-medio);
+    color: white;
+    font: 1.3em 'Raleway';
+    padding: 10px;
+    border-radius: 10px;
+    text-align: center;
+    margin-top: 60px;
+}
+
+.container p {
+    margin: 10px 80px 20px 80px;
+}
+
+input[type="number"] {
+    background-color: var(--verde-medio);
+    border: 1px solid var(--verde-clarinho);
+    padding: 10px;
+    margin: auto;
+    border-radius: 10px;
+}
+
+input[type="number"]:focus {
+    background-color: white;
+}
+
+input[type="number"]::placeholder {
+    color: var(--verde-claro);
+}
+
+button {
+    background-color: white;
+    border: 0px;
+    border-radius: 100px;
+    box-shadow: 1px 1px 1px var(--verde-claro);
+    cursor: pointer;
+    font: bold 1.1em 'Raleway';
+    color: var(--verde-escuro);
+    padding: 10px 100px;
+    margin: auto;
+} 
+
+button:hover {
+    background-color: var(--verde-claro);
+    box-shadow: 1px 1px 1px var(--verde-medio);
+}
+
+a.cta-section {
+    padding: 10px 20px;
+    margin: 20px 100px;
+    font-size: 1.1em;
+    color: white;
+    background-color: var(--verde-medio);
+    text-decoration: none;
+    border-radius: 30px;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center; 
+    text-align: center;
+}
+
+a.cta-section:hover {
+    background-color: white;
+    color: var(--verde-medio);
+}
+
+audio {
+    display: block;
+    margin: 20px auto;
+    padding: 10px 0;
+}
+
+footer {
+    background-color: var(--verde-lesbico);
+    font-size: 0.8em;
+    color: var(--verde-clarinho);
+    padding: 10px;
+    text-align: center;
+}
+
+footer a {
+    text-decoration: underline;
+    color: var(--verde-clarinho);
+}

@@ -1,0 +1,257 @@
+@charset "UTF-8";
+
+/*
+PALETA DE CORES:
+
+verde lésbico - #566837
+verde médio - #4E6B25
+verde claro - #ABC77D
+verde clarinho - #CBEC9C
+
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
+
+:root {
+    --verde-lesbico: #566837;
+    --verde-medio: #4E6B25;
+    --verde-claro: #ABC77D;
+    --verde-clarinho: #CBEC9C;
+    --verde-escuro: #273611;
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    font-family: 'Montserrat', 'Raleway', sans-serif;
+    background-color: var(--verde-clarinho);
+}
+
+header {
+    background-color: var(--verde-lesbico);
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    height: 200px;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-evenly;
+}
+
+header h1 {
+    font: normal 4.5em 'Great Vibes';
+    padding: 30px;
+    transition: 2s;
+    margin: 0px;
+}
+
+header img {
+    object-fit: cover;
+    border-radius: 50%;
+    display: inline-block;
+    margin: 10px;
+    width: 200px;
+    height: 200px;
+}
+
+nav {
+    background-color: var(--verde-lesbico);
+    margin: 0px;
+    padding: 20px 20px;
+    display: flex;
+    flex-flow: row nowrap;
+}
+
+nav li {
+    font: normal 0.9em 'Montserrat';
+    padding-top: 0px;
+    transition: transform 0.3s;
+    list-style-type: none;
+    display: inline-block;
+}
+
+nav a {
+    text-decoration: none;
+    border-radius: 10px;
+    padding: 10px;
+    color: #273611;
+    background-color: var(--verde-clarinho);
+}
+
+nav a:hover {
+    background-color: white;
+    color: var(--verde-lesbico);
+    transform: translate(-3px, -3px);
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.400);
+    transition: transform 0.3s;
+}
+
+main {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-content: center;
+    background-color: var(--verde-clarinho);
+    margin: auto;
+    max-width: 700px;
+}
+
+main h2 {
+    font: bold 1.5em 'Montserrat';
+    text-align: center;
+}
+
+.contagem {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: center;
+    padding-top: 100px;
+}
+
+#countdown {
+    font-family: 'Montserrat', sans-serif;
+    background-color: var(--verde-medio);
+    color: white;
+    padding: 20px;
+    border-radius: 15px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-top: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    letter-spacing: 2px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.relogio {
+    display: block;
+    padding: 50px;
+    text-align: center;
+}
+
+.clock {
+    display: inline-block;
+    padding: 50px 20px;
+    border: 3px solid var(--verde-escuro);
+    border-radius: 50%;
+    margin: 30px;
+    font: bold 1.5em 'Montserrat';
+}
+
+#clock-brasil {
+    background: url(../imagens/bandeira-br.png) center center no-repeat;
+    background-size: cover;
+}
+
+#clock-portugal {
+    background: url(../imagens/bandeira-pt.png) center center no-repeat;
+    background-size: cover;
+}
+
+fieldset {
+    border: 0px;
+    background-color: var(--verde-escuro);
+    border-radius: 20px;
+    padding-top: 40px;
+    margin-bottom: 30px;
+}
+
+legend {
+    font: bold 1.3em 'Montserrat';
+    text-align: center;
+    color: white;
+    padding-top: 70px;
+}
+
+label {
+    font: 0.8em 'Raleway';
+    color: var(--verde-clarinho);
+    display: inline-block;
+    margin: 0px 10px 10px 10px;
+    cursor: pointer;
+    position: relative;
+}
+
+input[type="checkbox"] {
+    display: none;
+    width: 20px;
+    height: 20px;
+}
+
+label::before {
+    content: '';
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border: 2px solid var(--verde-clarinho);
+    border-radius: 5px;
+    margin: 10px;
+    transition: all 0.3s ease;
+    vertical-align: middle;
+}
+
+input[type="checkbox"]:checked + label::before {
+    background-color: #4CAF50;
+    border-color: #4CAF50;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+label:hover::before {
+    border-color: #388E3C;
+}
+
+input[type="checkbox"]:checked + label::after {
+    content: "✔";
+    font-size: 18px;
+    color: white;
+    position: absolute;
+    top: 10px;
+    left: 16px;
+}
+
+a.cta-section {
+    padding: 10px 20px;
+    margin: 50px;
+    font-size: 1.1em;
+    color: white;
+    background-color: var(--verde-medio);
+    text-decoration: none;
+    border-radius: 30px;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center; 
+    text-align: center;
+}
+
+a.cta-section:hover {
+    background-color: white;
+    color: var(--verde-medio);
+}
+
+audio {
+    display: flex;
+    flex-flow: column nowrap;
+    margin: auto;
+    padding-bottom: 50px;
+}
+
+footer {
+    background-color: var(--verde-lesbico);
+    font-size: 0.8em;
+    color: var(--verde-clarinho);
+    padding: 10px;
+    text-align: center;
+}
+
+footer a {
+    text-decoration: underline;
+    color: var(--verde-clarinho);
+}
