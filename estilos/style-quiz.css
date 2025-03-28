@@ -320,6 +320,11 @@ button:hover {
     font: 1.9em 'Raleway';
 }
 
+.card-content p {
+    color: var(--verde-clarinho);
+    font: 1em 'Raleway';
+}
+
 .card-content img,
 .card-content video {
     max-width: 100px;
