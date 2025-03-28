@@ -94,7 +94,6 @@ nav a:hover {
 }
 
 main {
-    height: 100vh;
     display: flex;
     flex-flow: row nowrap;
     justify-content: center;
@@ -104,8 +103,18 @@ main {
     max-width: 700px;
 }
 
-/* ADICIONAR ESTILO DA PÁGINA AQUI */
+main h2 {
+    font: bold 1.5em 'Montserrat';
+    margin: 0px;
+    padding-bottom: 40px;
+    text-align: center;
+}
 
+main p {
+    font: normal 1em 'Raleway';
+    text-align: center;
+    padding: 10px;
+}
 
 a.cta-section {
     padding: 10px 20px;
@@ -125,6 +134,13 @@ a.cta-section {
 a.cta-section:hover {
     background-color: white;
     color: var(--verde-medio);
+}
+
+
+audio {
+    display: flex;
+    flex-flow: column nowrap;
+    margin: auto;
 }
 
 footer {

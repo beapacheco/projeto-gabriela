@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Distância - Gabia</title>
+    <title>Quiz - Gabia</title>
     <link rel="shortcut icon" href="imagens/favicon/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="estilos/style-quiz.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=chevron_right" />
@@ -19,7 +19,7 @@
             <li><a href="timeline.html" target="_self">Linha do Tempo</a></li>
             <li><a href="distancia.html" target="_self">Distância</a></li>
             <li><a href="quiz.html" target="_self">Quiz</a></li> 
-            <li><a href="favoritos.html" target="_self">Favoritos</a></li>
+            <li><a href="nosso-futuro.html" target="_self">Futuro</a></li>
         </ul>
     </nav>
 
@@ -146,7 +146,7 @@
             </form>
 
                 <div class="container">
-                    <h2>Adivinha o quanto eu te amo!</h2>
+                    <h2>Questão extra: Adivinha o quanto eu te amo!</h2>
                     <p>Digite um número abaixo e eu vou te responder se você acertou ou não!</p>
                     
                     <input type="number" id="chute" placeholder="Digite um número">
@@ -155,7 +155,62 @@
                     
                     <p id="resultado"></p>
                 </div>
-            <a class="cta-section" href="favoritos.html">Próxima página <span class="material-symbols-outlined">
+
+                <p class="premios">Some seus pontos e abra seu vale</p>
+                <ul>
+                    <li>0 a 5 pontos - Vale 1</li>
+                    <li>6 a 10 pontos - Vale 2</li>
+                    <li>11 a 15 pontos - Vale 3</li>
+                    <li>16 a 20 pontos - Vale 4</li>
+                </ul>
+
+                <div class="card-container">
+                    <div class="card" onclick="openCard(this)">
+                        <h3>Vale 1</h3>
+                        <div class="card-content">
+                            <audio controls>
+                                <source src="musicas/premio-audio.unknown">
+                                Seu navegador não suporta o áudio.
+                            </audio>
+                        </div>
+                    </div>
+            
+                    <div class="card" onclick="openCard(this)">
+                        <h3>Vale 2</h3>
+                        <div class="card-content">
+                            <a href="https://puzzel.org/pt/jigsaw/play?p=-OMOpfFgu6ZDk2dV74tP" target="_blank">Clique aqui</a>
+                        </div>
+                    </div>
+            
+                    <!-- Carta 3: Imagem da carta escrita a mão -->
+                    <div class="card" onclick="openCard(this)">
+                        <h3>Vale 3</h3>
+                        <div class="card-content">
+                            <img src="outra-imagem.jpg" alt="Outra imagem especial" />
+                        </div>
+                    </div>
+            
+                    <!-- Carta 4: Vídeo POR QR CODE  -->
+                    <div class="card" onclick="openCard(this)">
+                        <h3>Vale 4</h3>
+                        <div class="card-content">
+                            <video controls>
+                                <source src="video.mp4" type="video/mp4">
+                                Seu navegador não suporta o vídeo.
+                            </video>
+                        </div>
+                    </div>
+                </div>
+                
+                 <!--
+        PRÊMIOS:
+        0-5: mensagem de áudio
+        6-10: quebra cabeça nosso
+        11-15: foto de uma cartinha escrita a mão
+        16-20: vídeo de música (autoral se der tempo ou cantando alguma música)
+        -->
+            
+            <a class="cta-section" href="nosso-futuro.html">Próxima página <span class="material-symbols-outlined">
                 chevron_right
                 </span> </a>
             <audio id="player" controls autoplay loop>
@@ -172,6 +227,6 @@
         </p>
     </footer>
 
-    <script src="script-quiz.js"></script>
+    <script src="javascript/script-quiz.js"></script>
 </body>
 </html>

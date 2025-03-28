@@ -123,7 +123,23 @@ p {
     margin: 0px 100px 30px 100px;
 }
 
+.premios {
+    font: 1.2em 'Montserrat';
+    background-color: var(--verde-lesbico);
+    color: white;
+    padding: 10px;
+    border-radius: 10px;
+    margin: 40px;
+}
+
 ol {
+    list-style-position: inside;
+    background-color: var(--verde-claro);
+    padding: 10px;
+    margin-bottom: 30px;
+}
+
+section ul {
     list-style-position: inside;
     background-color: var(--verde-claro);
     padding: 10px;
@@ -141,8 +157,7 @@ li {
 
 form {
     background-color: var(--verde-escuro);
-    border-radius: 10px;
-    box-shadow: 2px 2px 3px black;
+    border-radius: 10px 10px 0px 0px;
     color: var(--verde-clarinho);
     display: flex;
     flex-flow: column nowrap;
@@ -209,20 +224,22 @@ input[type="submit"]:hover {
     flex-flow: column wrap;
     align-content: center;
     justify-content: space-evenly;
+    border-radius: 0px 0px 10px 10px;
+    background-color: var(--verde-escuro);
 }
 
 .container h2 {
-    background-color: var(--verde-medio);
-    color: white;
+    background-color: var(--verde-clarinho);
     font: 1.3em 'Raleway';
     padding: 10px;
     border-radius: 10px;
     text-align: center;
-    margin-top: 60px;
+    margin: auto;
 }
 
 .container p {
     margin: 10px 80px 20px 80px;
+    color: white;
 }
 
 input[type="number"] {
@@ -257,6 +274,62 @@ button:hover {
     background-color: var(--verde-claro);
     box-shadow: 1px 1px 1px var(--verde-medio);
 }
+
+.card-container {
+    display: flex;
+    gap: 20px;
+    flex-flow: row wrap;
+    justify-content: center;
+}
+
+.card {
+    width: 150px;
+    height: 150px;
+    background-color: var(--verde-lesbico);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    position: relative;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.card h3 {
+    text-align: center;
+    margin: 10px 0;
+    font-size: 16px;
+    font-weight: bold;
+    color: white;
+}
+
+.card-content {
+    display: none;
+    text-align: center;
+}
+
+.card.open .card-content {
+    display: block;
+}
+
+.card-content a {
+    text-decoration: none;
+    color: var(--verde-clarinho);
+    font: 1.9em 'Raleway';
+}
+
+.card-content img,
+.card-content video {
+    max-width: 100px;
+    max-height: 100px;
+}
+
+.card-content audio {
+    width: 140px;
+}
+
 
 a.cta-section {
     padding: 10px 20px;

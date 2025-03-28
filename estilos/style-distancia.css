@@ -171,7 +171,7 @@ legend {
 }
 
 label {
-    font: 0.8em 'Raleway';
+    font: 0.9em 'Raleway';
     color: var(--verde-clarinho);
     display: inline-block;
     margin: 0px 10px 10px 10px;
