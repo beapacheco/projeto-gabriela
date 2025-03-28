@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Romance - Gabia</title>
+    <link rel="shortcut icon" href="imagens/favicon/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="estilos/style-romance.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=chevron_right" />
+</head>
+<body>
+    <header>
+        <h1> Beatriz & Gabriela </h1>
+        <img src="imagens/1.jpg" alt="Foto minha e da minha namorada">
+    </header>
+    <nav>
+        <ul>
+            <li><a href="index.html" target="_self">Home</a></li>
+            <li><a href="timeline.html" target="_self">Timeline</a></li>
+            <li><a href="distancia.html" target="_self">Distância</a></li>
+            <li><a href="quiz.html" target="_self">Quiz</a></li> 
+            <li><a href="romance.html" target="_self">Romance</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section>
+            <h2>Top 1 Sensações</h2>
+            <p>Esse é um jogo da memória com algumas qualidades suas que eu amo (queria colocar mais, mas infelizmente ia ficar muito grande). Te amo todinha! Boa sorte no jogo! </p>
+
+            <div id="game-board" class="game-board">
+                <!-- Cards vão ser gerados aqui pelo JavaScript -->
+              </div>
+
+            <div class="alfabeto">
+                <h2>Alfabeto de Dates</h2>
+
+                <p>Esse é um alfabeto de dates! Provavelmente você já viu isso no TikTok. Aqui nós poderemos fazer em ordem, escolher aleatoriamente ou se a indecisão bater forte (como sempre acontece com a gente), poderemos sortear. Ah, e cada letra tem 2 opções pra ter mais opções ainda (exceto as letras K e Z, porque, sinceramente, impossível, a não ser que você queira fazer Kart ou Zumba)</p>
+
+                <ol id="lista-opcoes">
+                    <li>Arcade ou Acampamento</li>
+                    <li>Bicicleta ou Bar</li>
+                    <li>Cachoeira ou Café com calma</li>
+                    <li>Dança (aula) ou Dia Surpresa</li>
+                    <li>Experimentar uma culinária diferente ou Escrever cartas uma para a outra</li>
+                    <li>Feirinha ou Filmes (maratona)</li>
+                    <li>Galeria de arte ou Gastronomia em casa</li>
+                    <li>Hotel chique (1 noite) ou Happy Hour em casa</li>
+                    <li>Ilha (visitar alguma) ou Ir ao planetário</li>
+                    <li>Jantar romântico ou Jardim Botânico</li>
+                    <li>Karaokê</li>
+                    <li>Luau na praia ou Lago (picnic)</li>
+                    <li>Montar quebra-cabeça ou Mirante no por do sol</li>
+                    <li>Noite de jogos ou Nascer do sol</li>
+                    <li>Oficina de pintura ou Ópera</li>
+                    <li>Passeio de balão ou Passeio de barco</li>
+                    <li>Quebra-cabeça ou Quadro (pintar juntas)</li>
+                    <li>Rooftop ou Roda gigante</li>
+                    <li>Stand up comedy ou Spa</li>
+                    <li>Teatro ou Trilha</li>
+                    <li>Usar fantasia rs ou Ursinho de Pelúcia (maquininha)</li>
+                    <li>Vinícola ou Viagem de Bate-Volta</li>
+                    <li>Zoológico</li>
+                </ol>
+            </div>
+            <button id="sortear">Sortear</button>
+            <div id="resultado"></div>
+
+            <div class="futuro">
+                <h2>Nosso futuro juntas</h2>
+                <p>Aqui iremos colocar metas, sonhos, desejos que temos enquanto casal (infelizmente não ficará salvo, porque ainda não aprendi como fazer isso, mas a gente cria e tira um print - o que vale é a intenção)</p>
+                <div class="input-section">
+                    <textarea id="newGoal" placeholder="Escreva aqui uma meta nossa"></textarea> <br>
+                    <button onclick="addGoal()">Adicionar Meta</button>
+                </div>
+        
+                <div class="goals-list" id="goalsList">
+                </div>
+            </div>
+        </section>
+        <section>
+            <a class="cta-section" href="index.html">Voltar para a página inicial <span class="material-symbols-outlined">
+                chevron_right
+                </span> </a>
+            <audio id="player" controls autoplay loop>
+                <source src="musicas/alianca.mp3" type="audio/mpeg">
+                Seu navegador não suporta o elemento de áudio.
+            </audio>
+        </section>
+    </main>
+
+    <footer>
+        <p>
+            "Pois tudo que é amor parece com você."
+            Criado por <a href="https://github.com/beapacheco" target="_blank">Beatriz Pacheco</a>
+        </p>
+    </footer>
+    <script src="javascript/script-romance.js"></script>
+</body>
+</html>

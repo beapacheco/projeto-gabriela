@@ -110,10 +110,10 @@ main h2 {
     text-align: center;
 }
 
-main p {
-    font: normal 1em 'Raleway';
-    text-align: center;
-    padding: 10px;
+p {
+    font: 1em 'Montserrat';
+    padding: 15px;
+    margin-left: 40px;
 }
 
 a.cta-section {
@@ -135,7 +135,6 @@ a.cta-section:hover {
     background-color: white;
     color: var(--verde-medio);
 }
-
 
 audio {
     display: flex;

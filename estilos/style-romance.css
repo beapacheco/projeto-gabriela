@@ -1,0 +1,234 @@
+@charset "UTF-8";
+
+/*
+PALETA DE CORES:
+
+verde lésbico - #566837
+verde médio - #4E6B25
+verde claro - #ABC77D
+verde clarinho - #CBEC9C
+
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
+
+:root {
+    --verde-lesbico: #566837;
+    --verde-medio: #4E6B25;
+    --verde-claro: #ABC77D;
+    --verde-clarinho: #CBEC9C;
+    --verde-escuro: #273611;
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    font-family: 'Montserrat', 'Raleway', sans-serif;
+    background-color: var(--verde-clarinho);
+    height: 100vh;
+}
+
+header {
+    background-color: var(--verde-lesbico);
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    height: 200px;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-evenly;
+}
+
+header h1 {
+    font: normal 4.5em 'Great Vibes';
+    padding: 30px;
+    transition: 2s;
+    margin: 0px;
+}
+
+header img {
+    object-fit: cover;
+    border-radius: 50%;
+    display: inline-block;
+    margin: 10px;
+    width: 200px;
+    height: 200px;
+}
+
+nav {
+    background-color: var(--verde-lesbico);
+    margin: 0px;
+    padding: 20px 20px;
+    display: flex;
+    flex-flow: row nowrap;
+}
+
+nav li {
+    font: normal 0.9em 'Montserrat';
+    padding-top: 0px;
+    transition: transform 0.3s;
+    list-style-type: none;
+    display: inline-block;
+}
+
+nav a {
+    text-decoration: none;
+    border-radius: 10px;
+    padding: 10px;
+    color: #273611;
+    background-color: var(--verde-clarinho);
+}
+
+nav a:hover {
+    background-color: white;
+    color: var(--verde-lesbico);
+    transform: translate(-3px, -3px);
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.400);
+    transition: transform 0.3s;
+}
+
+main {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--verde-clarinho);
+    margin: auto;
+    max-width: 700px;
+}
+
+main h2 {
+    font: bold 1.5em 'Montserrat';
+    margin-top: 60px;
+    padding-bottom: 20px;
+    text-align: center;
+}
+
+main p {
+    font: normal 1em 'Raleway';
+    text-align: center;
+    background-color: var(--verde-lesbico);
+    color: white;
+    padding: 10px;
+    border-radius: 10px;
+    margin: 0px 100px 30px 100px;
+}
+
+.game-board {
+    display: grid;
+    grid-template-columns: repeat(4, 100px);
+    gap: 10px;
+    justify-content: center;
+    padding-bottom: 10px;
+  }
+  
+  .card {
+    width: 100px;
+    height: 100px;
+    background-color: var(--verde-medio);
+    border-radius: 8px;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    font: bold 0.9em 'Montserrat';
+    text-align: center;
+    cursor: pointer;
+    position: relative;
+  }
+  
+  .card.flipped {
+    background-color: var(--verde-claro);
+    color: var(--verde-escuro);
+  }
+  
+  .card.matched {
+    background-color: #4caf50;
+    color: var(--verde-clarinho);
+    pointer-events: none;
+  }
+
+  .card.flipped::before {
+    content: attr(data-value);
+  }
+
+.alfabeto {
+    padding: 20px;
+    border-radius: 8px;
+}
+
+ol {
+    margin-left: 100px;
+}
+
+li {
+    
+}
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+#resultado {
+    margin-top: 20px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+}
+
+
+a.cta-section {
+    padding: 10px 20px;
+    margin: 50px;
+    font-size: 1.1em;
+    color: white;
+    background-color: var(--verde-medio);
+    text-decoration: none;
+    border-radius: 30px;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center; 
+    text-align: center; /
+}
+
+a.cta-section:hover {
+    background-color: white;
+    color: var(--verde-medio);
+}
+
+
+audio {
+    display: flex;
+    flex-flow: column nowrap;
+    margin: auto;
+}
+
+footer {
+    background-color: var(--verde-lesbico);
+    font-size: 0.8em;
+    color: var(--verde-clarinho);
+    padding: 10px;
+    text-align: center;
+}
+
+footer a {
+    text-decoration: underline;
+    color: var(--verde-clarinho);
+}
