@@ -96,7 +96,6 @@ nav a:hover {
 h2 {
     text-align: center;
     margin: 90px;
-    background-color: #273611;
     font: bold 1.1em 'Montserrat';
     color: var(--verde-escuro);
     text-transform: uppercase;

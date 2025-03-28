@@ -112,12 +112,11 @@ main h2 {
 
 main p {
     font: normal 1em 'Raleway';
-    text-align: center;
-    background-color: var(--verde-lesbico);
-    color: white;
+    background-color: var(--verde-claro);
     padding: 10px;
-    border-radius: 10px;
-    margin: 0px 100px 30px 100px;
+    margin-bottom: 30px;
+    line-height: 25px;
+    
 }
 
 .game-board {
@@ -158,40 +157,112 @@ main p {
     content: attr(data-value);
   }
 
-.alfabeto {
-    padding: 20px;
-    border-radius: 8px;
-}
-
-ol {
-    margin-left: 100px;
-}
 
 li {
-    
+    line-height: 30px;
+}
+
+#lista-opcoes {
+    list-style-type: none;
+    padding: 0;
+}
+
+#lista-opcoes li:nth-child(odd) {
+    background-color: var(--verde-medio);
+    color: white;
+}
+
+#lista-opcoes li:nth-child(even) {
+    background-color: var(--verde-claro);
+}
+
+#lista-opcoes li {
+    padding: 10px;
+    margin: 5px 0;
+}
+
+.input-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin-bottom: 30px;
 }
 
 button {
-    background-color: #4CAF50;
-    color: white;
-    border: none;
-    padding: 10px;
-    border-radius: 5px;
+    background-color: wihte;
+    border: 0px;
+    border-radius: 100px;
+    box-shadow: 1px 1px 1px var(--verde-clarinho);
     cursor: pointer;
-    font-size: 16px;
+    padding: 10px 40px;
+    font: bold 1.3em 'Raleway';
+    color: var(--verde-escuro);
+    margin: 10px 0;
+    display: block;
 }
 
 button:hover {
     background-color: #45a049;
 }
 
+.goals-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.goal {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10px;
+    width: 100%;
+    max-width: 400px;
+}
+
+.goal input {
+    margin-right: 10px;
+}
+
+#goalsList {
+    padding: 0;
+    margin: 20px 0;
+}
+
+#newGoal {
+    background-color: var(--verde-medio);
+    border: 2px solid var(--verde-claro);
+    padding: 5px;
+    margin-bottom: 20px;
+    resize: none;
+    width: 300px;
+    height: 100px;
+}
+
+#newGoal:focus {
+    background-color: var(--verde-clarinho);
+    border: 1px solid var(--verde-clarinho);
+    width: 300px;
+    height: 100px;    padding: 5px;
+    margin-bottom: 20px;
+}
+
+#newGoal::placeholder {
+    color: var(--verde-claro);
+}
+
 #resultado {
     margin-top: 20px;
     font-size: 18px;
     font-weight: bold;
-    color: #333;
+    color: var(--verde-escuro);
 }
-
 
 a.cta-section {
     padding: 10px 20px;
@@ -214,10 +285,17 @@ a.cta-section:hover {
 }
 
 
-audio {
+.audio-container {
     display: flex;
-    flex-flow: column nowrap;
-    margin: auto;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+audio {
+    width: 80%;
+    max-width: 600px;
+    margin-bottom: 20px;
 }
 
 footer {
