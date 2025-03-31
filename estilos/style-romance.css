@@ -237,27 +237,33 @@ button:hover {
     align-items: flex-start;
     width: 100%;
     max-width: 400px;
-    margin: 0 auto;
+    margin: 10px;
+    padding: 0;
 }
 
 .goal {
-    display: flex; /* Mudamos para flexbox */
-    align-items: center; /* Alinhamento vertical no centro */
-    margin-bottom: 10px; /* Espaçamento entre as metas */
+    display: flex; 
+    align-items: center;
+    margin-bottom: 10px;
+    width: 100%;
+    padding-left: 10px;
+    box-sizing: border-box;
 }
 
 .goal input {
+    align-self: center;
     margin-right: 10px;
+    margin-left: 0px;
 }
 
 #goalsList {
     padding: 0;
-    margin: 20px 0;
+    margin: 20px;
 }
 
 .goal span {
-    flex-grow: 1;                     /* Faz com que o texto ocupe o espaço restante */
-    word-wrap: break-word;            /* Quebra de linha no texto, caso necessário */
+    display: inline-block;
+    line-height: 20px;
 }
 
 #newGoal {
