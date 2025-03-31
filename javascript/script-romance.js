@@ -1,3 +1,58 @@
+const cardValues = ['Seu sorriso', 'Sua boca', 'Seus cachinhos', 'Seu senso de humor', 'Sua inteligência', 'Suas orelhinhas', 'Seu corpo', 'Sua parceria'];
+let cards = [...cardValues, ...cardValues];
+cards = cards.sort(() => Math.random() - 0.5);
+
+const gameBoard = document.getElementById('game-board');
+const message = document.getElementById('message');
+let flippedCards = [];
+let matchedCards = [];
+
+function createCard(value) {
+    const card = document.createElement('div');
+    card.classList.add('card');
+    card.dataset.value = value;
+    card.addEventListener('click', flipCard);
+    return card;
+}
+
+function flipCard() {
+    if (flippedCards.length === 2 || this.classList.contains('flipped') || matchedCards.includes(this)) {
+        return;
+    }
+
+    this.classList.add('flipped');
+    flippedCards.push(this);
+
+    if (flippedCards.length === 2) {
+        setTimeout(() => {
+            if (flippedCards[0].dataset.value === flippedCards[1].dataset.value) {
+                flippedCards[0].classList.add('matched');
+                flippedCards[1].classList.add('matched');
+                matchedCards.push(flippedCards[0], flippedCards[1]);
+                checkGameOver(); 
+            } else {
+                flippedCards[0].classList.remove('flipped');
+                flippedCards[1].classList.remove('flipped');
+            }
+            flippedCards = [];
+        }, 1000);
+    }
+}
+
+function checkGameOver() {
+    if (matchedCards.length === cards.length) {
+        message.classList.add('show');
+    }
+}
+
+cards.forEach(value => {
+    const card = createCard(value);
+    gameBoard.appendChild(card);
+});
+
+
+
+
 document.getElementById('sortear').addEventListener('click', function() {
     const opcoes = document.querySelectorAll('#lista-opcoes li');
     
@@ -40,50 +95,4 @@ function markAsDone(event) {
     } else {
         goal.style.textDecoration = "none";
     }
-
 }
-
-
-const cardValues = ['Seu sorriso', 'Sua boca', 'Seus cachinhos', 'Seu senso de humor', 'Sua inteligência', 'Suas orelhinhas', 'Seu corpo', 'Sua parceria'];
-let cards = [...cardValues, ...cardValues];
-cards = cards.sort(() => Math.random() - 0.5);
-
-const gameBoard = document.getElementById('game-board');
-let flippedCards = [];
-let matchedCards = [];
-
-function createCard(value) {
-  const card = document.createElement('div');
-  card.classList.add('card');
-  card.dataset.value = value;
-  card.addEventListener('click', flipCard);
-  return card;
-}
-
-function flipCard() {
-  if (flippedCards.length === 2 || this.classList.contains('flipped') || matchedCards.includes(this)) {
-    return;
-  }
-
-  this.classList.add('flipped');
-  flippedCards.push(this);
-
-  if (flippedCards.length === 2) {
-    setTimeout(() => {
-      if (flippedCards[0].dataset.value === flippedCards[1].dataset.value) {
-        flippedCards[0].classList.add('matched');
-        flippedCards[1].classList.add('matched');
-        matchedCards.push(flippedCards[0], flippedCards[1]);
-      } else {
-        flippedCards[0].classList.remove('flipped');
-        flippedCards[1].classList.remove('flipped');
-      }
-      flippedCards = [];
-    }, 1000);
-  }
-}
-
-cards.forEach(value => {
-  const card = createCard(value);
-  gameBoard.appendChild(card);
-});
