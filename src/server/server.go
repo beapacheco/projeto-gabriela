@@ -18,7 +18,7 @@ func rootPage(c echo.Context) error {
 	return c.String(http.StatusOK, "hello world")
 }
 
-func quizExtra(c echo.Context) error {
+func quiz(c echo.Context) error {
 	var req Resposta
 
 	if err := c.Bind(&req); err != nil {
@@ -26,12 +26,27 @@ func quizExtra(c echo.Context) error {
 	}
 
 	if req.Resposta == "" {
-		fmt.Println("Se tu não digitar um número, não vai saber a resposta! Se manca, ovo mole!")
-
+		return c.JSON(http.StatusOK, map[string]string{"mensagem": "Se tu não digitar um número, não vai saber a resposta! Se manca, ovo mole!"})
 	}
 
 	return c.JSON(http.StatusOK, map[string]string{"mensagem": "Errou, diva! Eu te amo ∞⁰"})
 }
+
+
+func quizExtra(c echo.Context) error {
+	var req Resposta
+
+	if err := c.Bind(&req); err != nil {
+		fmt.Println("error")
+	}
+
+	// if req.Resposta == "" {
+	// 	return c.JSON(http.StatusOK, map[string]string{"mensagem": req.Resposta})
+	// }
+
+	return c.JSON(http.StatusOK, map[string]string{"mensagem": req.Resposta})
+}
+
 
 func ServerLocal() {
 	e := echo.New()
@@ -42,6 +57,7 @@ func ServerLocal() {
 	}))
 
 	e.GET("/", rootPage)
+	e.POST("/quiz", quizExtra)
 	e.POST("/quiz-extra", quizExtra)
 
 	log.Println("Iniciando servidor na porta 8000...")
